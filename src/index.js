@@ -116,7 +116,7 @@ class Stump {
   verbose (...messages) {
     const promises = [];
     for (var i = 0; i < this.actions.length; i++) {
-      if (this.settings.debug) promises.push(this.actions[i]('info', this.settings, ...messages));
+      if (this.settings.debug) promises.push(this.actions[i]('verbose', this.settings, ...messages));
     }
     return Promise.all(promises);
   }
