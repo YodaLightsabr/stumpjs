@@ -1,9 +1,9 @@
 /*
   Stump.js
-  Innovative logging for Node.js
+  Logging solution for Node.js
 */
 const fetch = require('node-fetch');
-const Discord = { // Provide LogBridge support
+const Discord = {
   queue: [],
   requestPost: (text) => {
     Discord.queue.push(text); 
