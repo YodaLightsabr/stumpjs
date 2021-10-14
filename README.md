@@ -18,6 +18,11 @@ Output:
 ## Usage
 The `Stump` class is invoked with two arguments: features and settings. The `Debug` feature enables the `debug` and `verbose` log messages. The `Discord` feature enables posting to a Discord webhook and requires the `webhook` parameter in the settings object.
 
+To enable timestamps, add the `Timestamp` feature.
+
+Output:
+![Output example](https://cdn.discordapp.com/attachments/898047385211637790/898055553383825478/unknown.png)
+
 ### Logging methods:
 
  - `.info()`

@@ -34,12 +34,15 @@ const Discord = {
 }
 const DefaultMethods = {
   console: async (type, settings, ...messages) => {
-    if (type === 'info') console.log('\x1b[47m\x1b[30m   INFO    \x1b[0m', ...messages);
-    if (type === 'success') console.log('\x1b[42m\x1b[30m  SUCCESS  \x1b[0m', ...messages);
-    if (type === 'verbose') console.log('\x1b[44m\x1b[30m  VERBOSE  \x1b[0m', ...messages);
-    if (type === 'error') console.error('\x1b[41m\x1b[30m   ERROR   \x1b[0m', ...messages);
-    if (type === 'warn') console.warn('\x1b[43m\x1b[30m   WARN    \x1b[0m', ...messages);
-    if (type === 'debug') console.log('\x1b[45m\x1b[30m   DEBUG   \x1b[0m', ...messages);
+    let timestamp = new Date().toUTCString();
+    timestamp = ' \x1b[2m' + timestamp + '\x1b[0m |';
+    if (!settings.timestamp) timestamp = '';
+    if (type === 'info') console.log('\x1b[47m\x1b[30m   INFO    \x1b[0m' + timestamp, ...messages);
+    if (type === 'success') console.log('\x1b[42m\x1b[30m  SUCCESS  \x1b[0m' + timestamp, ...messages);
+    if (type === 'verbose') console.log('\x1b[44m\x1b[30m  VERBOSE  \x1b[0m' + timestamp, ...messages);
+    if (type === 'error') console.error('\x1b[41m\x1b[30m   ERROR   \x1b[0m' + timestamp, ...messages);
+    if (type === 'warn') console.warn('\x1b[43m\x1b[30m   WARN    \x1b[0m' + timestamp, ...messages);
+    if (type === 'debug') console.log('\x1b[45m\x1b[30m   DEBUG   \x1b[0m' + timestamp, ...messages);
     return 0;
   },
   discord: (type, settings, ...messages) => {
@@ -75,6 +78,9 @@ class Stump {
       if (typeof feature === 'string' && feature.toLowerCase() === 'discord') {
         this.actions.push(DefaultMethods.discord);
         Discord.init();
+      }
+      if (typeof feature === 'string' && feature.toLowerCase() === 'timestamp') {
+        this.settings.timestamp = true;
       }
     }
   }
