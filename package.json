@@ -1,0 +1,25 @@
+{
+  "name": "stump.js",
+  "version": "1.0.0",
+  "description": "Innovative logging for Node.js",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"No test script\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YodaLightsabr/stump.js.git"
+  },
+  "keywords": [
+    "logging"
+  ],
+  "author": "YodaLightsabr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YodaLightsabr/stump.js/issues"
+  },
+  "homepage": "https://github.com/YodaLightsabr/stump.js#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
