@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YodaLightsabr/stump.js.git"
+    "url": "git+https://github.com/YodaLightsabr/stumpjs.git"
   },
   "keywords": [
     "logging"
@@ -16,9 +16,9 @@
   "author": "YodaLightsabr",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YodaLightsabr/stump.js/issues"
+    "url": "https://github.com/YodaLightsabr/stumpjs/issues"
   },
-  "homepage": "https://github.com/YodaLightsabr/stump.js#readme",
+  "homepage": "https://github.com/YodaLightsabr/stumpjs#readme",
   "dependencies": {
     "node-fetch": "^2.6.1"
   }
